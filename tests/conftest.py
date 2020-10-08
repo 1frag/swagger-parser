@@ -31,8 +31,8 @@ def inline_parser():
                         'tests/allof.yaml',
                         'tests/array_ref_simple.yaml',
                         'tests/null_type.yaml',
-                        'tests/array_items_list.yaml',
-                        'tests/type_list.yaml',
+                        # 'tests/array_items_list.yaml',
+                        # 'tests/type_list.yaml',
                         ])
 def swagger_file_parser(request):
     return SwaggerParser(request.param)
@@ -143,3 +143,8 @@ def post_put_path_data():
 @pytest.fixture
 def swagger_array_parser():
     return SwaggerParser('tests/swagger_arrays.yaml')
+
+
+@pytest.fixture
+def swagger_msg_validate_parser():
+    return SwaggerParser('tests/swagger_msg_validate.yaml')
